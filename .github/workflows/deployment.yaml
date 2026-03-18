@@ -3,13 +3,16 @@ name : deployment to github pages
 
 on  : [ push ]
 
+permissions : 
+  contents : write 
+  
 jobs : 
 
   deploy : 
 
    runs-on : ubuntu-latest 
    steps : 
-   
+
     - name : checkout 
       uses : actions/checkout@v3 
 
